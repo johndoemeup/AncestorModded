@@ -561,22 +561,6 @@ functions.getAxeList=function()
     end;
 end;
 functions.getAxeList();
-
-functions.joinDiscord=function()
-    local request=http_request or request or(http and http.request)or syn.request;
-    for i=6453,6464 do spawn(function()pcall(function()
-        request({
-            Url='http://127.0.0.1:'..tostring(i)..'/rpc?v=1',Method='POST',
-            Headers={['Content-Type']='application/json',Origin='https://discord.com'},
-            Body=game:GetService'HttpService':JSONEncode({
-                cmd='INVITE_BROWSER',
-                nonce=game:GetService'HttpService':GenerateGUID(false),
-                args={invite={code='EtXFmUcezP'},code='EtXFmUcezP'};
-            });
-        })end);
-    end)end;
-end;
-
 functions.axeFling=function()
     requirements.connections.axeFling=requirements.Mouse.Button1Down:Connect(function()
         local axe;
@@ -1983,10 +1967,6 @@ functions.whisperToTarget=function()
         if tostring(requirements.Strings.BaseRecipient)==tostring(requirements.LP)then return;end;
         requirements.remotes.sayMessageRequest:FireServer('/w '..tostring(requirements.Strings.BaseRecipient)..' load your base over my base to claim it! [Powered By Ancestor]','All');
     end;
-end;
-
-functions.tellDiscord=function()
-    requirements.remotes.sayMessageRequest:FireServer('Ancestor and the tag is 4476','All');
 end;
 
 functions.unloadSlot=function()
@@ -5477,14 +5457,6 @@ MainCarOptions:Button(
 local SettingsMain=main:Category('5182003557');
 local settings=SettingsMain:Section('Settings');
 
-settings:Button(
-    'Join Discord', 
-    function()
-    functions.joinDiscord();
-    end,
-    true
-);
-
 settings:KeyBind(
     'Toggle UI', 
     function(v)
@@ -5843,13 +5815,6 @@ if functions.isPlayerAdmin(requirements.LP)then
                 connection:Disconnect();
                 connection=nil;
             end;
-            end,
-            true
-        );
-        AdminOptions:Button(
-            'Tell Discord', 
-            function()
-                functions.tellDiscord();
             end,
             true
         );
