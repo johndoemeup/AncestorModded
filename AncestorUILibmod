@@ -128,10 +128,10 @@ function lib:Main()
 		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BackgroundTransparency = 1.000,
 		BorderSizePixel = 0,
-		Position = UDim2.new(.5, 0, 0.05, 0),
+		Position = UDim2.new(.3, 0, 0.05, 0),
 		Size = UDim2.new(0, 87, 0, 30),
 		Font = Enum.Font.GothamBold,
-		Text = "AncestorMod",
+		Text = "Ancestor Modded",
 		TextColor3 = Color3.fromRGB(255, 255, 255),
 		TextSize = 25.000,
 	})
