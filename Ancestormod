@@ -2,6 +2,8 @@
 
 --> Open Sourced by Ancestor
 
+--Edits by John Doe
+
 --> Credit if you use any code :)
 repeat wait()until game:IsLoaded()and game.Players.LocalPlayer.Character;
 local lib=loadstring(game:HttpGet('https://raw.githubusercontent.com/johndoemeup/AncestorModded/main/AncestorUILibmod'))();
