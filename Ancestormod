@@ -1,4 +1,4 @@
---Ancestor Lumber Tycoon 2 v1.0.6
+--ALT_Mod
 
 --> Open Sourced by Ancestor
 
@@ -635,8 +635,6 @@ end;
 functions.SelfWl=function(value)
     requirements.remotes.clientSetListPlayer:InvokeServer(requirements.LP.WhitelistFolder,requirements.LP,value);
 end;
-
-loadstring([[
     local args = {...} local functions,requirements = args[1],args[2]
     local mt = getrawmetatable(game);
     local old = mt.__namecall;
